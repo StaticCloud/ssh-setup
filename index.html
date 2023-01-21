@@ -45,7 +45,7 @@
                         GitHub (or whichever repository service you use). Here are the steps to generating the key:
                     </p>
                     <ul>
-                        <li>For Windows users, open Git Bash.</li>
+                        <li>For Windows users, open GitLab organization. Bash.</li>
                         <li>For MacOS users, the default terminal will be fine.</li>
                         <li>Enter <code>ssh-keygen</code>, it will begin generating the key.</li>
                         <li>You will be prompted multiple times, keep hitting enter until no more prompts appear.</li>
@@ -99,7 +99,34 @@
                 </section> 
                 <section id="add-key-to-gl">
                     <h1>Add the SSH Key to GitLab</h1>
+                    <ul>
+                        <li>Log in to your GitLab organization.</li>
+                        <li>Edit your profile by clicking on your profile icon in the top right of the page and selecting <code>Edit Profile</code>.</li>
+                        <li>Click on <code>SSH Keys</code> located on the left sidebar.</li>
+                        <li>Paste your key inside the box labeled <code>Key</code>, and add a title for your key.</li>
+                    </ul>
+                    <img src="assets/gitlab-setup.png" alt="gitlab-key">
+                    <p>Click <code>Add Key</code> when you're finished.</p>
                 </section> 
+                <section id="testing-the-github-connection">
+                    <h1>Testing the GitHub Connection</h1>
+                    <p>Now that we shared our keys with our services, we need to verify that the connection works. We can actually entirely through Git Bash!</p>
+                    <ul>
+                        <li>Open Git Bash.</li>
+                        <li>To test your GitHub connection, type <code>ssh -T git@github.com</code>, and hit enter.</li>
+                        <li>Your output might look a little different, but if it displays <code>Hi [username]! You've successfully authenticated, but GitHub does not provide shell access.</code>, the connection was successful.</li>
+                    </ul>
+                </section>
+                <section id="testing-the-gitlab-connection">
+                    <h1>Testing the GitLab Connection</h1>
+                    <p>The process for testing GitLab is very similar.</p>
+                    <ul>
+                        <li>Open Git Bash.</li>
+                        <li>To test your GitLab connection, enter <code>ssh -T git@[your organization name].com</code></li>
+                            <li class="second-level-li">For example, for my University of Oregon students, you would enter <code>ssh -T git@oregon.bootcampcontent.com</code>.</li>
+                        <li>If your output looks like <code>Welcome to GitLab, @[username]!</code>, the connection was successful.</li>
+                    </ul>
+                </section>
             </div>
         </main>
     </body>

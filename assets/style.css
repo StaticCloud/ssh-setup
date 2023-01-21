@@ -72,3 +72,8 @@ header p,
 .content {
     line-height: 1.5;
 }
+
+.second-level-li {
+    margin-left: 20px;
+    list-style-type: circle;
+}
