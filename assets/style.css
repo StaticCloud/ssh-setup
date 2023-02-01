@@ -10,7 +10,7 @@
 
 body {
     display: block;
-    width: 730px;
+    width: 350px;
     margin: 0 auto;
 }
 
@@ -41,13 +41,13 @@ header {
 }
 
 header h1 {
-    font-size: 3.5em;
+    font-size: 2em;
 }
 
 header p,
 .content p,
 .content ul {
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
 .content section {
@@ -76,4 +76,20 @@ header p,
 .second-level-li {
     margin-left: 20px;
     list-style-type: circle;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        width: 730px;
+    }
+
+    header h1 {
+        font-size: 3.5em;
+    }
+
+    header p,
+    .content p,
+    .content ul {
+        font-size: 1.3em;
+    }
 }
